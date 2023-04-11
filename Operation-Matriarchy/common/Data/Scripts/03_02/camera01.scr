@@ -1,0 +1,7 @@
+OnMessage(Code=ButtonPressed, Object=Ladder_sw, Count=1) {
+   SetCamera(On=1); 
+   Delay(Time=3.4);
+   SetCamera(On=0);
+   DelObjective(Name=03_02c);
+   SetObjective(On=1, Name=03_02d);
+}

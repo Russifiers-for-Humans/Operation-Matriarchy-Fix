@@ -1,0 +1,50 @@
+OnMessage(Code=Spawn, Object="fog_trigger", Count=1){
+}
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+
+//SendAll(Code=01_02a);
+
+SetTrigger(Name="key1", Value=0);
+SetTrigger(Name="key2", Value=0);
+SetTrigger(Name="key3", Value=0);
+
+SetObjective(On=1, Name=01_02a);
+
+EquipNVision();
+SetTrigger(Name="zozo", Value=1);
+Delay(Time=4.0);
+SendAll(Code=mark10);
+SendAll(Code=mark11);
+SendAll(Code=mark12);
+SendAll(Code=mark13);
+Call(Name=MainLoop);
+
+MainLoop(){
+   OnTriggers( momo=1, Count=1) {
+      Call(Name=Ambient2);
+   }
+   OnTriggers( zozo=1, Count=1) {
+      Call(Name=Ambient1);
+   }
+}
+
+Ambient1(){
+   OnTriggers( momo=1, Count=1) {
+      SetTrigger(Name="zozo", Value=0);
+      Call(Name=Ambient2);
+   }
+   OnTriggers( zozo=1, Count=1) {
+   PlayAmbientSound(Name=rolik2_s3, Time=1);
+   Delay(Time=5, Disp=5);
+   SetTrigger(Name="zozo", Value=1);
+   Call(Name=Ambient1);
+   }
+}   
+
+Ambient2(){
+   PlayAmbientSound(Name=rolik2_s4, Time=1);
+   Delay(Time=5, Disp=5);
+   SetTrigger(Name="momo", Value=1);
+   Call(Name=Ambient2);
+}

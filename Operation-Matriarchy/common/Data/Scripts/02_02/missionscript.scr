@@ -1,0 +1,12 @@
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+Delay(Time=2.0);
+SendAll(Code=mark02);
+SendAll(Code=02_02a);
+Call(Name=Ambient1);
+
+Ambient1(){
+   PlayAmbientSound(Name=rolik2_s9, Time=1);
+   Delay(Time=5, Disp=5);
+   Call(Name=Ambient1);
+}

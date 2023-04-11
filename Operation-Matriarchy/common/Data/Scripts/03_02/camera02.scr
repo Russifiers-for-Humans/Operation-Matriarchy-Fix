@@ -1,0 +1,8 @@
+OnMessage(Code=ButtonPressed, Object=konveer_button, Count=1) {
+   SetCamera(On=1); 
+   Animate(To=120);
+   Delay(Time=4.666);
+   SetCamera(On=0);
+   DelObjective(Name=03_02d);
+   SetObjective(On=1, Name=03_02b);
+}

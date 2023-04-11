@@ -1,0 +1,6 @@
+OnTriggers( key1=1, key2=1, key3=1, Count=1) {
+   SendAll(Code=01_02a);
+   //DelObjective(Name=01_02a);
+   //SetObjective(On=1, Name=01_02d);
+}
+

@@ -1,0 +1,11 @@
+OnMessage(Code=OnSuitEquip, Object=*){
+   SendAll(Code=unmark01);
+   SendAll(Code=mark02);
+// SetObjective(On=0, Name=03_04a);
+   SetCamera(On=1); 
+   Animate(To=98);
+   Delay(Time=5.0);
+   SetCamera(On=0);
+   DelObjective(Name=03_04a);
+   SetObjective(On=1, Name=03_04c);
+}

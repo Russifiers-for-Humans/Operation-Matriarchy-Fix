@@ -1,0 +1,19 @@
+ShowHud(Vis=0); 
+Call(Name=StartMe);
+StartMe()
+{
+   OnMessage(Code=ButtonPressed, Object=unlock_door1, Count=1)
+   {
+      SetCamera(On=1); 
+      Delay(Time=4.0);
+      SetCamera(On=0);      
+   }
+   OnMessage(Code=ButtonPressed, Object=unlock_door2, Count=1)
+   {
+      SetCamera(On=1); 
+      Delay(Time=4.0);
+      SetCamera(On=0);
+      DelObjective(Name=02_07a);
+      SetObjective(On=1, Name=02_07b);
+   }
+}

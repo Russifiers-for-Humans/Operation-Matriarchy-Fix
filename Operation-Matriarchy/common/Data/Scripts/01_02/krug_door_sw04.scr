@@ -1,0 +1,19 @@
+Call(Name=LockMe);
+LockMe() 
+   {
+   OnMessage(Code=Spawn, Object=KeyCapture04, Count=1)
+      {
+      Call(Name=StartMe);
+      }
+   }
+StartMe()
+{
+   SetUsable();
+   OnUse(Count=0)
+   {
+      Key(Vis=0, Type=2);
+      PlaySound(Wave=Button);
+      Delay(Time=.5);
+      NextMission(Name=01_02b); 
+   }
+}

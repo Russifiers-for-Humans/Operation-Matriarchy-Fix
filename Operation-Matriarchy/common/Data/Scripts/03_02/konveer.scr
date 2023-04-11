@@ -1,0 +1,14 @@
+OnMessage(Code=ButtonPressed, Object=konveer_button, Count=1) {
+   Animate(To=130);
+   SendAll(Code=unmark04);
+   SendAll(Code=mark05);
+   //DelObjective(Name=03_02c);
+   //SetObjective(On=1, Name=03_02b);
+//   Delay(Time=14.0);
+//   Call(Name=Loop);
+//   Loop(){
+//      Animate(From=604, To=1200);
+//      Delay(Time=30.0);
+//      Call(Name=Loop);
+//   }
+}

@@ -1,0 +1,33 @@
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+Delay(Time=1.0);
+SendAll(Code=02_03a);
+
+Call(Name=Ambient1);
+
+Ambient1(){
+   PlayAmbientSound(Name=am_wing_medium, Time=1);
+   Delay(Time=5, Disp=5);
+   Call(Name=Ambient1);
+}
+
+//developer
+//GiveAmmo(Ammo=HumanWeaponClip1, Count=100);
+GiveWeapon(Weapon=HumanWeapon2, Count=200);
+
+//GiveWeapon(Weapon=HumanWeapon3, Count=100);
+//GiveWeapon(Weapon=HumanWeapon4, Count=100);
+//GiveWeapon(Weapon=HumanWeaponKnife, Count=10000);
+//GiveWeapon(Weapon=HumanWeaponPistol, Count=100);
+//GiveWeapon(Weapon=HumanWeaponPlasmaGun, Count=100);
+//GiveWeapon(Weapon=HumanWeaponRocket, Count=100);
+//GiveWeapon(Weapon=HumanWeaponDisco, Count=100);
+//GiveWeapon(Weapon=SuitWeaponLaser, Count=100);
+//GiveWeapon(Weapon=SuitWeaponFlame, Count=100);
+//GiveWeapon(Weapon=SuitWeaponMachine, Count=100);
+//GiveWeapon(Weapon=SuitWeaponRocket, Count=100);
+//GiveWeapon(Weapon=VelianWeaponBio, Count=100);
+//GiveWeapon(Weapon=VelianWeaponSniper, Count=100);
+//GiveWeapon(Weapon=VelianWeaponFlame, Count=100);
+//GiveWeapon(Weapon=VelianWeaponAcid, Count=100);
+//GiveWeapon(Weapon=VelianWeaponNet, Count=100);

@@ -1,0 +1,19 @@
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+GiveWeapon(Weapon=VelianWeaponBio, Count=100);
+SetFog(Density=.005, Color=(191,17,17));
+PlayAmbientSound(Name=am_comp_work3, Time=1);
+
+//Delay(Time=2.0);
+//SendAll(Code=mark02);
+//SetObjective(On=1, Name=02_07a);
+
+ShowHud(Vis=0);
+Delay(Time=1.0);
+
+//ShakeCamera(Str, FadePos, FadeStr, Freq, Dur);
+OnMessage(Code=quake){
+   ShakeCamera(Str=0.07, FadePos=4, FadeStr=0.3, Freq=40, Dur=2);
+}
+
+ShowHud(Vis=0);

@@ -1,0 +1,12 @@
+OnMessage(Code=02_03b){
+  SendAll(Code=mark01);
+  SetObjective(On=1, Name=02_03c);
+}
+OnMessage(Code=ButtonPressed, Object=Door_locked_sw, Count=1){
+   SendAll(Code=mark02);
+   SendAll(Code=unmark01);
+   DelObjective(Name=02_03c);
+   SetObjective(On=1, Name=02_03d);
+   Delay(Time=1.0);
+   Animate(To=100);
+}

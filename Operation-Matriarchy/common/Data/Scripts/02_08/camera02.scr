@@ -1,0 +1,7 @@
+ShowHud(Vis=0);
+SetCamera(On=1);
+ShowHud(Vis=0);
+Animate(To=200);
+Delay(Time=6.2);
+SetCamera(On=0); 
+SendAll(Code=game_start);

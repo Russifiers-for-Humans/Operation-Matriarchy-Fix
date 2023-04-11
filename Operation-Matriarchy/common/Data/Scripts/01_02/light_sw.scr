@@ -1,0 +1,8 @@
+SetUsable();
+OnUse(Count=0) {
+   SendAll(Code=ButtonPressed);
+   PlaySound(Wave=Button);
+   DelObjective(Name=01_02c);   
+   SendAll(Code=unmark13);
+   SendAll(Code=mark14);
+}

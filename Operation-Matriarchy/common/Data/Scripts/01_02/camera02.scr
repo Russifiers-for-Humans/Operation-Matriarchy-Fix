@@ -1,0 +1,12 @@
+Call(Name=StartMe);
+StartMe()
+{
+   OnMessage(Object=light_sw, Code=ButtonPressed, Count=1)
+   {
+      SetCamera(On=1); 
+      Delay(Time=5.0);
+      SetCamera(On=0);
+      SendAll(Code=01_02d);
+      SetObjective(On=1, Name=01_02d);
+   }
+}

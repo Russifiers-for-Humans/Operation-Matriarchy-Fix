@@ -1,0 +1,22 @@
+DelObjective(Name=01_02a);
+Delay(Time=1.0);
+SetObjective(On=1, Name=01_02b);
+SetRadarMark(On=1);
+//SetObjective(On=0, Name=01_02a);
+
+SetUsable();
+OnUse(Count=1) {
+   SendAll(Code=ButtonPressed);
+   PlaySound(Wave=Button); 
+   DelObjective(Name=01_02b);
+   SetRadarMark(On=0);
+   //SendAll(Code=01_02c);
+   SendAll(Code=mark13);
+}
+Delay(Time=1.0);
+SetTrigger(Name="zozo", Value=0);
+SetTrigger(Name="momo", Value=1);
+
+
+
+

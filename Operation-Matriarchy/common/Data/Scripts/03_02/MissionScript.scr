@@ -1,0 +1,21 @@
+SetFog(Density=0.0125, Color=(80,80,80));
+
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+
+//developer
+GiveWeapon(Weapon=HumanWeapon2, Count=120);
+GiveWeapon(Weapon=HumanWeapon1, Count=100);
+
+SetObjective(On=1, Name=03_02a);
+
+Delay(Time=1.0);
+SendAll(Code=mark01);
+
+Call(Name=Ambient1);
+
+Ambient1(){
+   PlayAmbientSound(Name=am_comp_work6, Time=1);
+   Delay(Time=5, Disp=5);
+   Call(Name=Ambient1);
+}

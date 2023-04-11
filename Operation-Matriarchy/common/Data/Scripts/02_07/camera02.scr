@@ -1,0 +1,25 @@
+ShowHud(Vis=0);
+Delay(Time=0.1);
+ShowHud(Vis=0);
+FadeCamera(StartColor=0xFF000000, StopColor=0x00000000, Time=1.5);
+SetCamera(On=1); 
+ShowHud(Vis=0);
+Animate(To=900);
+Delay(Time=30.0);
+SetCamera(On=0);
+ShowHud(Vis=1);
+Delay(Time=2.0);
+SendAll(Code=mark02);
+SetObjective(On=1, Name=02_07a);
+SetTrigger(Name="zozo", Value=1);
+
+Call(Name=Ambient1);
+
+Ambient1(){
+   OnTriggers( zozo=1, Count=1) {
+   PlayAmbientSound(Name=am_comp_work4, Time=1);
+   Delay(Time=5, Disp=5);
+   SetTrigger(Name="zozo", Value=1);
+   Call(Name=Ambient1);
+   }
+}   

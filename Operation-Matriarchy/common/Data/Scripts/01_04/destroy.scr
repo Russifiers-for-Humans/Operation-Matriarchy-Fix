@@ -1,0 +1,73 @@
+Call(Name=StartMe);
+StartMe()
+{
+   OnMessage(Code=sd, Object=*, Count=1)
+   {
+      Delay(Time=4.0, Disp = 0);
+//      Call(Name=Rem5);
+      Timer(Vis=1, StartTime=3:00, StopTime=0);
+        Delay(Time=60.0, Disp = 0);
+//      Call(Name=Rem4);
+        Delay(Time=60.0, Disp = 0);
+//      Call(Name=Rem3);
+        Delay(Time=60.0, Disp = 0);
+//      Call(Name=Rem2);
+//      Delay(Time=60.0, Disp = 0);
+//      Call(Name=Rem1);                 
+//      Delay(Time=60.0, Disp = 0);
+//      Call(Name=Sec5);                 
+      Delay(Time=1.0, Disp = 0);
+//      Call(Name=Sec4);
+      Delay(Time=1.0, Disp = 0);
+//      Call(Name=Sec3);                       
+      Delay(Time=1.0, Disp = 0);
+//      Call(Name=Sec2);                       
+      Delay(Time=1.0, Disp = 0);
+//      Call(Name=Sec1);
+
+//vremya vishlo, game over
+      SendAll(Code=boom);
+      
+   }
+}                                                   
+Rem5()
+{
+      PlaySound(Wave=rem5);
+}
+Rem4()
+{
+      PlaySound(Wave=rem4);
+}
+Rem3()
+{
+      PlaySound(Wave=rem3);
+}
+Rem2()
+{
+      PlaySound(Wave=rem2);
+}
+Rem1()
+{
+      PlaySound(Wave=rem1);
+}
+Sec5()
+{
+      PlaySound(Wave=sec5);
+}
+Sec4()
+{
+      PlaySound(Wave=sec4);
+}
+Sec3()
+{
+      PlaySound(Wave=sec3);
+}
+Sec2()
+{
+      PlaySound(Wave=sec2);
+}
+Sec1()
+{
+      PlaySound(Wave=sec1);
+}
+

@@ -1,0 +1,18 @@
+OnMessage(Code=Spawn, Object=rolik0_trigger, Count=1){
+   SetTrigger(Name="zozo", Value=0);
+   SetTrigger(Name="momo", Value=1);
+   Delay(Time=3.5);
+   PlaySound(Wave=rolik1_s2);
+   Delay(Time=3.5);
+   //PlaySound(Wave=rolik2_s2);
+   Delay(Time=2);
+   //PlaySound(Wave=rolik2_s3);
+   Delay(Time=1.1);
+   //PlaySound(Wave=rolik2_s4);
+   Delay(Time=2.1);
+   //PlaySound(Wave=rolik2_s5);
+   Delay(Time=14.5);
+   //PlaySound(Wave=rolik2_s6); 
+   Delay(Time=10);
+   SendAll(Code=sd);
+}

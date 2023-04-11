@@ -1,0 +1,8 @@
+OnMessage(Object=button_door_final, Code=ButtonPressed, Count=1){
+   SetCamera(On=1); 
+   Animate(To=300);
+   Delay(Time=8.0);
+   SetCamera(On=0);
+   SendAll(Code=01_02c);
+   SetObjective(On=1, Name=01_02c);
+}

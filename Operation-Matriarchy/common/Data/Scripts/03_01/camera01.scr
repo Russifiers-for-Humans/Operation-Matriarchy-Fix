@@ -1,0 +1,6 @@
+OnMessage(Code=ButtonPressed, Object=final_door_sw, Count=1) {
+   ShowHud(Vis=0); 
+//   Animate(To=500);
+   Delay(Time=4.0);
+   SetCamera(On=0);
+}

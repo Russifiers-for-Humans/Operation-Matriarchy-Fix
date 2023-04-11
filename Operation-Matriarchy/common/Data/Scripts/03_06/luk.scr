@@ -1,0 +1,4 @@
+OnMessage(Code=OpenLuk, Object=*){
+//   SetObjective(On=0, Name=03_06a);
+   Animate(To=150);
+}

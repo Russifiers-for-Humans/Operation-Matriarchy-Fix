@@ -1,0 +1,14 @@
+   OnMessage(Code=ButtonPressed, Object=kamera_sw02, Count=1)
+   {
+      SetCamera(On=1); 
+      Animate(To=175);
+      Delay(Time=10.0);
+      SetCamera(On=0);
+      SendAll(Code=unmark02);
+      SendAll(Code=mark03);
+      Delay(Time=0.1);
+      DelObjective(Name=02_08a);
+      DelObjective(Name=02_08b);
+      SendAll(Code=Fuck);
+      SetObjective(On=1, Name=02_08d);
+   }

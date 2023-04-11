@@ -1,0 +1,37 @@
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+
+//developer
+GiveAmmo(Ammo=HumanWeaponClip1, Count=100);
+GiveWeapon(Weapon=HumanWeapon2, Count=100);
+
+Delay(Time=2.0);
+SetObjective(On=1, Name=01_04d);
+//SetObjective(On=1, Name=01_04a);
+SendAll(Code=mark01);
+SetTrigger(Name="zozo", Value=1);
+
+Call(Name=Ambient1);
+
+Ambient1(){
+   OnTriggers( momo=1, Count=1) {
+      SetTrigger(Name="zozo", Value=0);
+      PlayAmbientSound(Name=sv_mech5_loop, Time=2);
+      Delay(Time=42);
+      Call(Name=Ambient2);
+   }
+   OnTriggers( zozo=1, Count=1) {
+   PlayAmbientSound(Name=rolik2_s6, Time=1);
+   Delay(Time=5, Disp=5);
+   SetTrigger(Name="zozo", Value=1);
+   Call(Name=Ambient1);
+   }
+}   
+
+
+Ambient2(){
+   SetTrigger(Name="momo", Value=0);
+   PlayAmbientSound(Name=rolik2_s7, Time=1);
+   Delay(Time=5, Disp=5);
+   Call(Name=Ambient2);
+}

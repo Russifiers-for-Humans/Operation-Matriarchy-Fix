@@ -1,0 +1,9 @@
+OnMessage(Code=Spawn, Object=KeyCapture, Count=1)
+{
+   Key(Vis=1, Type=0);
+   PlaySound(Wave=key_cap);
+   SendAll(Code=unmark01);
+   SendAll(Code=mark02);
+   DelObjective(Name=03_02a);
+   SetObjective(On=1, Name=03_02c);
+}

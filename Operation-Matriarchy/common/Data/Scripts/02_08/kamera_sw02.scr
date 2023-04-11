@@ -1,0 +1,5 @@
+SetUsable();
+OnUse(Count=1) {
+   SendAll(Code=ButtonPressed);
+   PlaySound(Wave=Button);
+}

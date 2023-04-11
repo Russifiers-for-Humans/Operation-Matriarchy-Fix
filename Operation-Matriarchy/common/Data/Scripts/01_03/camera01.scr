@@ -1,0 +1,14 @@
+Call(Name=StartMe);
+StartMe()
+{
+   OnMessage(Code=UnlockDoor02, Count=1) 
+   {
+      SetCamera(On=1); 
+      Delay(Time=5.0);
+      SetCamera(On=0);
+      SetRadarMark(On=0);
+      SendAll(Code=mark01_03b);
+      DelObjective(Name=01_03a);
+      SetObjective(On=1, Name=01_03b);
+   }
+}

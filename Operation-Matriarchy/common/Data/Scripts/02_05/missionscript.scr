@@ -1,0 +1,12 @@
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+
+ShowHud(Vis=0);
+Delay(Time=2.0);
+Call(Name=Ambient1);
+
+Ambient1(){
+   PlayAmbientSound(Name=am_comp_work2, Time=1);
+   Delay(Time=5, Disp=5);
+   Call(Name=Ambient1);
+}

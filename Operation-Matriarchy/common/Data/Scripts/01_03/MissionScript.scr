@@ -1,0 +1,21 @@
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+
+//developer
+GiveAmmo(Ammo=HumanWeaponClip1, Count=60);
+
+SetObjective(On=1, Name=01_03a);
+
+Delay(Time=1.5);
+Call(Name=Ambient1);
+
+Ambient1(){
+   PlayAmbientSound(Name=am_velian2, Time=1);
+   Delay(Time=5, Disp=5);
+   Call(Name=Ambient1);
+}
+
+   
+
+
+

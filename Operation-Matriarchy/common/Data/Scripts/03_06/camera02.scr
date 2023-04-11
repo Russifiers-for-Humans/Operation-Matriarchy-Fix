@@ -1,0 +1,7 @@
+OnMessage(Code=OpenLuk, Object=*){
+   SetCamera(On=1); 
+   Delay(Time=4.0);
+   SetCamera(On=0);
+   DelObjective(Name=03_06a);
+   SetObjective(On=1, Name=03_06b);
+}

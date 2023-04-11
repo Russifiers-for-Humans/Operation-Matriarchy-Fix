@@ -1,0 +1,19 @@
+//give knife
+GiveWeapon(Weapon=HumanWeaponKnife, Count=-1);
+
+//developer
+GiveAmmo(Ammo=HumanWeaponClip1, Count=100);
+GiveAmmo(Ammo=HumanWeaponClip2, Count=100);
+GiveWeapon(Weapon=HumanWeapon2, Count=100);
+GiveWeapon(Weapon=HumanWeaponPlasmaGun, Count=100);
+GiveWeapon(Weapon=HumanWeaponRocket, Count=100);
+Delay(Time=1.0);
+SendAll(Code=mark01);
+SetObjective(On=1, Name=03_04a);
+Call(Name=Ambient1);
+
+Ambient1(){
+   PlayAmbientSound(Name=am_nature, Time=1);
+   Delay(Time=5, Disp=5);
+   Call(Name=Ambient1);
+}

@@ -1,0 +1,10 @@
+OnCollide(Count=1){
+   SendAll(Code=unmark02);
+   SendAll(Code=mark03);
+//   SetObjective(On=0, Name=03_01a);
+   DelObjective(Name=03_01a);
+   SetObjective(On=1, Name=03_01b);
+   SetTrigger(Name="zozo", Value=0);
+   SetTrigger(Name="momo", Value=1);
+}
+

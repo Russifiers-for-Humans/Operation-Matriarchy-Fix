@@ -1,0 +1,11 @@
+Call(Name=StartMe);
+StartMe()
+{
+   OnMessage(Code=Spawn, Object=KeyCapture, Count=1)
+   {
+      Key(Vis=1, Type=0);
+      SetTrigger(Name="zozo", Value=0);
+      SetTrigger(Name="momo", Value=1);
+      PlaySound(Wave=key_cap);
+   }
+}

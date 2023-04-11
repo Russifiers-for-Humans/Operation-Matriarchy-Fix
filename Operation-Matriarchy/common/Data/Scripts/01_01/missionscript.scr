@@ -1,0 +1,40 @@
+SetHealth(Count=57);
+SetArmor(Count=0);
+Delay(Time=0.2);
+PlayAmbientSound(Name=rolik1_s1, Time=1);
+Delay(Time=36.0);
+SendAll(Code=01_01a);
+SetObjective(On=1, Name=01_01a);
+Delay(Time=17.0);
+SetTrigger(Name="zozo", Value=1);
+
+Call(Name=MainLoop);
+
+MainLoop(){
+   OnTriggers( momo=1, Count=1) {
+      Call(Name=Ambient2);
+   }
+   OnTriggers( zozo=1, Count=1) {
+      Call(Name=Ambient1);
+   }
+}
+
+Ambient1(){
+   OnTriggers( momo=1, Count=1) {
+      SetTrigger(Name="zozo", Value=0);
+      Call(Name=Ambient2);
+   }
+   OnTriggers( zozo=1, Count=1) {
+   PlayAmbientSound(Name=rolik2_s1, Time=1);
+   Delay(Time=5, Disp=5);
+   SetTrigger(Name="zozo", Value=1);
+   Call(Name=Ambient1);
+   }
+}   
+
+Ambient2(){
+   PlayAmbientSound(Name=rolik2_s2, Time=1);
+   Delay(Time=5, Disp=5);
+   SetTrigger(Name="momo", Value=1);
+   Call(Name=Ambient2);
+}

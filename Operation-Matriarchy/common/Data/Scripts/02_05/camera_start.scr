@@ -1,0 +1,9 @@
+ShowHud(Vis=0);
+SetCamera(On=1); 
+Delay(Time=1.0);
+ShowHud(Vis=0);
+Delay(Time=7.0);
+SetCamera(On=0);
+ShowHud(Vis=1);
+SetObjective(On=1, Name=02_05a);
+SendAll(Code=mark02);

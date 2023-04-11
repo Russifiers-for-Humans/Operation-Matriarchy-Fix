@@ -1,0 +1,15 @@
+OnMessage(Code=$Mark$) {
+  SetRadarMark(On=1, Name=$Mark$);
+}
+OnMessage(Code=$UnMark$) {
+  SetRadarMark(On=0, Name=$Mark$);
+}
+OnMessage(Code=Spawn, Object=cp_big_tower03){
+//   SetObjective(On=0, Name=03_01a);
+   DelObjective(Name=03_01a);
+   SetObjective(On=1, Name=03_02a);
+   SendAll(Code=unmark01);
+   SendAll(Code=mark02);
+}
+SetTrigger(Name="zozo", Value=0);
+SetTrigger(Name="momo", Value=1);

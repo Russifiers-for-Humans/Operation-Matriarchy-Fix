@@ -1,0 +1,7 @@
+SetRadarMark(On=1);
+SetUsable();
+OnUse(Count=1) 
+{
+   SendAll(Code=UnlockDoor02);
+   PlaySound(Wave=Button);
+}

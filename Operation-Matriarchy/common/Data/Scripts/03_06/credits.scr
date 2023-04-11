@@ -1,0 +1,13 @@
+OnMessage(Code=TheEnd){
+Delay(Time=1.5);
+SetTrigger(Name="zozo", Value=0);
+SetTrigger(Name="momo", Value=1);
+SendAll(Code=FogDisable);
+   SetCamera(On=1);
+   Delay(Time=15);
+   Animate(To=20000);
+   //Delay(Time=670);
+   Delay(Time=195);
+   StopGame();
+   SetCamera(On=0);   
+}
